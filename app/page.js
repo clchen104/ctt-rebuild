@@ -103,11 +103,11 @@ export default function Home() {
 
       {/* ═══════════ OPENING HOURS ═══════════ */}
       <section id="hours" className="bg-white shadow-md">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 py-5 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 px-4 py-5 sm:flex-row sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 rounded-sm bg-green-500 px-8 py-3 text-white">
             <span className="font-heading text-lg font-bold">Opening Hours</span>
           </div>
-          <div className="flex flex-1 items-center justify-center gap-8 sm:justify-start">
+          <div className="flex items-center justify-center gap-8">
             <div className="flex items-center gap-3">
               <span className="text-sm text-gray-500">Mon - Fri:</span>
               <span className="font-heading text-3xl font-bold text-gray-800">
@@ -179,7 +179,7 @@ export default function Home() {
                 Led by Former World Champion Gao Jun
               </p>
               <ul className="mt-6 space-y-3">
-                {["World Class Facility", "Professional Coaches", "Enthusiast Members"].map((item) => (
+                {["World Class Facility", "Professional Coaches", "Enthusiastic Members"].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-gray-700">
                     <CheckIcon className="h-5 w-5 flex-shrink-0 text-gray-400" />
                     {item}
