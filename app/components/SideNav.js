@@ -35,8 +35,6 @@ export default function SideNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // The dial offset keeps the active item vertically centered.
-  // Each item slot is 40px tall; shift so activeIndex lands at center.
   const itemHeight = 40;
   const offsetY = -activeIndex * itemHeight;
 
@@ -50,7 +48,6 @@ export default function SideNav() {
           const distance = Math.abs(i - activeIndex);
           const isActive = i === activeIndex;
 
-          // Scale & opacity fall off with distance from active
           const scale = isActive ? 1 : Math.max(0.75, 1 - distance * 0.12);
           const opacity = isActive ? 1 : Math.max(0.3, 1 - distance * 0.25);
 
@@ -69,17 +66,17 @@ export default function SideNav() {
               <span
                 className={`font-medium transition-all duration-500 ${
                   isActive
-                    ? "text-sm text-gray-700"
-                    : "text-xs text-gray-400 group-hover:text-gray-600"
+                    ? "text-[14px] text-[#1B2A4A]"
+                    : "text-[12px] text-[#6B7280] group-hover:text-[#1B2A4A]"
                 }`}
               >
                 {item.label}
               </span>
               <div
-                className={`rounded-full border transition-all duration-500 group-hover:bg-red-500 ${
+                className={`rounded-full transition-all duration-500 ${
                   isActive
-                    ? "h-3 w-3 border-red-500 bg-red-500"
-                    : "h-2.5 w-2.5 border-gray-400 bg-transparent"
+                    ? "h-3 w-3 bg-[#CC0000]"
+                    : "h-2.5 w-2.5 border border-[#D4D4D4] bg-transparent group-hover:bg-[#CC0000]"
                 }`}
               />
             </a>

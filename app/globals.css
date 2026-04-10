@@ -2,10 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --red-primary: #dc2626;
-  --red-dark: #b91c1c;
-  --dark-bg: #1a1a1a;
+  --foreground: #1B2A4A;
+  --red-primary: #CC0000;
+  --navy: #1B2A4A;
+  --light-gray: #F5F5F5;
+  --border: #D4D4D4;
+  --muted: #6B7280;
 }
 
 @theme inline {
@@ -18,11 +20,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body), Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading), Helvetica, Arial, sans-serif;
 }
 
 /* Hero fade-in */

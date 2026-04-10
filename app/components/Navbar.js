@@ -19,14 +19,14 @@ export default function Navbar() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-red-600 text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-2 text-sm font-bold tracking-widest sm:px-6 lg:px-8">
+      <div className="bg-[#CC0000] text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-2 text-sm font-semibold tracking-widest sm:px-6 lg:px-8">
           <span>CALL TODAY - 626-765-7772</span>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-[#D4D4D4] bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link href="/">
@@ -43,7 +43,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-red-600"
+                className="px-3 py-2 text-[16px] font-medium text-[#1B2A4A] transition-colors hover:text-[#CC0000]"
               >
                 {link.label}
               </Link>
@@ -51,16 +51,16 @@ export default function Navbar() {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <Link
               href="/login"
-              className="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-800"
+              className="rounded-[4px] border border-[#1B2A4A] px-4 py-2 text-sm font-semibold text-[#1B2A4A] transition-colors hover:bg-[#1B2A4A] hover:text-white"
             >
               Student Login
             </Link>
             <Link
               href="/membership"
-              className="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-800"
+              className="rounded-[4px] bg-[#CC0000] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#A30000]"
             >
               Club Membership
             </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 lg:hidden"
+            className="inline-flex items-center justify-center rounded-[4px] p-2 text-[#1B2A4A] hover:bg-[#F5F5F5] lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
           >
@@ -87,29 +87,29 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <nav className="border-t border-gray-100 bg-white px-4 pb-4 lg:hidden">
+          <nav className="border-t border-[#D4D4D4] bg-white px-4 pb-4 lg:hidden">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-600"
+                className="block px-3 py-2 text-base font-medium text-[#1B2A4A] hover:bg-[#F5F5F5] hover:text-[#CC0000]"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 flex flex-col gap-2 border-t border-gray-100 pt-3">
+            <div className="mt-3 flex flex-col gap-2 border-t border-[#D4D4D4] pt-3">
               <Link
                 href="/login"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-md bg-blue-700 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-blue-800"
+                className="rounded-[4px] border border-[#1B2A4A] px-4 py-2 text-center text-sm font-semibold text-[#1B2A4A]"
               >
                 Student Login
               </Link>
               <Link
                 href="/membership"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-md bg-blue-700 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-blue-800"
+                className="rounded-[4px] bg-[#CC0000] px-4 py-2 text-center text-sm font-semibold text-white"
               >
                 Club Membership
               </Link>

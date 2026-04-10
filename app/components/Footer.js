@@ -64,19 +64,17 @@ function InstagramIcon({ className }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300">
-      <div className="pt-10" />
-
+    <footer className="bg-[#1B2A4A] text-white/80">
       {/* Main footer grid */}
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4 className="font-heading text-sm font-bold text-white">{col.title}</h4>
+              <h4 className="text-[14px] font-semibold text-white">{col.title}</h4>
               <ul className="mt-3 space-y-2">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-400 transition-colors hover:text-white">
+                    <Link href={link.href} className="text-[14px] text-white/50 transition-colors hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -87,18 +85,18 @@ export default function Footer() {
 
           {/* League & Resources */}
           <div>
-            <h4 className="font-heading text-sm font-bold text-white">League</h4>
+            <h4 className="text-[14px] font-semibold text-white">League</h4>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/league" className="text-sm text-gray-400 transition-colors hover:text-white">
+                <Link href="/league" className="text-[14px] text-white/50 transition-colors hover:text-white">
                   Overview
                 </Link>
               </li>
             </ul>
-            <h4 className="mt-6 font-heading text-sm font-bold text-white">Resources</h4>
+            <h4 className="mt-6 text-[14px] font-semibold text-white">Resources</h4>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/help" className="text-sm text-gray-400 transition-colors hover:text-white">
+                <Link href="/help" className="text-[14px] text-white/50 transition-colors hover:text-white">
                   Help Center
                 </Link>
               </li>
@@ -107,16 +105,16 @@ export default function Footer() {
 
           {/* Location, Contact & Butterfly */}
           <div>
-            <h4 className="font-heading text-sm font-bold text-white">Location</h4>
-            <p className="mt-3 text-sm text-gray-400">
+            <h4 className="text-[14px] font-semibold text-white">Location</h4>
+            <p className="mt-3 text-[14px] text-white/50">
               2727 Stingle Ave.
               <br />
               #10, Rosemead CA
               <br />
               91770
             </p>
-            <h4 className="mt-6 font-heading text-sm font-bold text-white">Contact Us</h4>
-            <p className="mt-2 text-sm text-gray-400">
+            <h4 className="mt-6 text-[14px] font-semibold text-white">Contact Us</h4>
+            <p className="mt-2 text-[14px] text-white/50">
               1-626-765-7772
               <br />
               info@californiatabletennis.com
@@ -126,7 +124,7 @@ export default function Footer() {
               <img
                 src="https://static.wixstatic.com/media/467df6_dbca37891a6a4473b3aa4df2ff1007f8~mv2.png/v1/fill/w_286,h_134,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BTY%20SHOP%202024_white%20outline.png"
                 alt="Butterfly Table Tennis"
-                className="h-12 w-auto opacity-80"
+                className="h-12 w-auto opacity-60"
               />
             </div>
           </div>
@@ -134,30 +132,28 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div>
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <p className="text-sm text-gray-500">
-            A Table Tennis Club by Former World Champion Gao Jun | 501(c)(3) Nonprofit Organization
-          </p>
-          <hr className="my-4 border-gray-700" />
-          <div className="flex flex-wrap items-center justify-between gap-y-3">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
-              <span>&copy; 2010 – Present California Table Tennis All Rights Reserved</span>
-              <span className="hidden sm:inline">|</span>
-              <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
-              <span>|</span>
-              <Link href="/cookies" className="hover:text-gray-300">Cookie Preferences</Link>
-              <span>|</span>
-              <Link href="/terms" className="hover:text-gray-300">Terms of Use</Link>
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
-                <FacebookIcon className="h-5 w-5" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
-                <InstagramIcon className="h-5 w-5" />
-              </a>
-            </div>
+      <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+        <p className="text-[14px] text-white/40">
+          A Table Tennis Club by Former World Champion Gao Jun | 501(c)(3) Nonprofit Organization
+        </p>
+        <hr className="my-4 border-white/20" />
+        <div className="flex flex-wrap items-center justify-between gap-y-3">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[14px] text-white/40">
+            <span>&copy; 2010 &ndash; Present California Table Tennis All Rights Reserved</span>
+            <span className="hidden sm:inline">|</span>
+            <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+            <span>|</span>
+            <Link href="/cookies" className="hover:text-white">Cookie Preferences</Link>
+            <span>|</span>
+            <Link href="/terms" className="hover:text-white">Terms of Use</Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 p-2 text-white/50 transition-colors hover:text-white">
+              <FacebookIcon className="h-4 w-4" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 p-2 text-white/50 transition-colors hover:text-white">
+              <InstagramIcon className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>

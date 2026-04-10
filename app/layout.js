@@ -6,7 +6,7 @@ import "./globals.css";
 const montserrat = Montserrat({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const inter = Inter({
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${montserrat.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans">
+      <body className="flex min-h-full flex-col bg-white text-[#1B2A4A] font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

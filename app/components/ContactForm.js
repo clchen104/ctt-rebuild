@@ -26,16 +26,16 @@ export default function ContactForm() {
   }
 
   if (!mounted) {
-    return <div className="rounded-lg bg-white p-8 shadow-lg" style={{ minHeight: 380 }} />;
+    return <div className="rounded-[8px] border border-[#D4D4D4] bg-white p-8" style={{ minHeight: 380 }} />;
   }
 
   if (submitted) {
     return (
-      <div className="rounded-lg bg-white p-8 shadow-lg">
-        <h3 className="font-heading text-xl font-bold text-gray-900">
+      <div className="rounded-[8px] border border-[#D4D4D4] bg-white p-8">
+        <h3 className="font-heading text-[24px] font-medium text-[#1B2A4A]">
           Thank you!
         </h3>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-[16px] text-[#6B7280]">
           We&apos;ve received your message and will get back to you soon.
         </p>
       </div>
@@ -43,8 +43,8 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg bg-white p-8 shadow-lg">
-      <h3 className="font-heading text-2xl font-bold text-gray-900">
+    <form onSubmit={handleSubmit} className="rounded-[8px] border border-[#D4D4D4] bg-white p-8">
+      <h3 className="font-heading text-[24px] font-semibold text-[#1B2A4A]">
         Contact us
       </h3>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -55,7 +55,7 @@ export default function ContactForm() {
           value={formData.firstName}
           onChange={handleChange}
           required
-          className="rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="rounded-[5px] border border-[#D4D4D4] px-4 py-3 text-[14px] text-[#1B2A4A] placeholder-[#6B7280] focus:border-[#CC0000] focus:outline-none"
         />
         <input
           type="text"
@@ -64,7 +64,7 @@ export default function ContactForm() {
           value={formData.lastName}
           onChange={handleChange}
           required
-          className="rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="rounded-[5px] border border-[#D4D4D4] px-4 py-3 text-[14px] text-[#1B2A4A] placeholder-[#6B7280] focus:border-[#CC0000] focus:outline-none"
         />
         <input
           type="email"
@@ -73,7 +73,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="rounded-[5px] border border-[#D4D4D4] px-4 py-3 text-[14px] text-[#1B2A4A] placeholder-[#6B7280] focus:border-[#CC0000] focus:outline-none"
         />
         <input
           type="tel"
@@ -81,11 +81,11 @@ export default function ContactForm() {
           placeholder="Phone"
           value={formData.phone}
           onChange={handleChange}
-          className="rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="rounded-[5px] border border-[#D4D4D4] px-4 py-3 text-[14px] text-[#1B2A4A] placeholder-[#6B7280] focus:border-[#CC0000] focus:outline-none"
         />
       </div>
       <div className="mt-4">
-        <label className="mb-1 block text-xs font-medium uppercase tracking-wider text-gray-500">
+        <label className="mb-1 block text-[12px] font-semibold uppercase tracking-[0.5px] text-[#6B7280]">
           Message
         </label>
         <textarea
@@ -94,12 +94,12 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full rounded-md border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-[5px] border border-[#D4D4D4] px-4 py-3 text-[14px] text-[#1B2A4A] placeholder-[#6B7280] focus:border-[#CC0000] focus:outline-none"
         />
       </div>
       <button
         type="submit"
-        className="mt-4 w-full rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        className="mt-4 w-full rounded-[4px] bg-[#CC0000] px-6 py-3 text-[16px] font-semibold text-white transition-colors hover:bg-[#A30000]"
       >
         Get in Touch
       </button>
