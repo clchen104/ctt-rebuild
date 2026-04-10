@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 import SideNav from "./components/SideNav";
+import ImageCarousel from "./components/ImageCarousel";
 
 /* ── SVG Icon Components ── */
 
@@ -151,18 +152,12 @@ export default function Home() {
       <section id="about" className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* Image area with decorative circle */}
+            {/* Image carousel with decorative circle */}
             <div className="relative">
               <div className="absolute -left-6 -top-6 h-28 w-28 rounded-full border-4 border-yellow-400" />
-              <div className="relative overflow-hidden rounded-sm shadow-lg">
-                {/* Replace with your own photos */}
-                <div
-                  className="aspect-[4/3] bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/about.jpg')",
-                  }}
-                />
-              </div>
+              <ImageCarousel
+                images={["/about.jpg", "/about2.jpg", "/about3.jpg", "/about_group.jpg"]}
+              />
             </div>
 
             {/* Text content */}
