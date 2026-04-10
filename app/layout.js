@@ -18,6 +18,9 @@ export const metadata = {
   title: "California Table Tennis",
   description:
     "A Table Tennis Club by Former World Champion. World-class coaching, competitive leagues, and programs for all skill levels in the LA area.",
+  icons: {
+    icon: "/logo-color.png",
+  },
 };
 
 export default function RootLayout({ children }) {

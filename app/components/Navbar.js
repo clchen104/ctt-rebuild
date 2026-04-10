@@ -29,18 +29,12 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            {/* Placeholder for real logo — replace with Image component when logo file is provided */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">
-              CTT
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-heading text-sm font-extrabold uppercase leading-tight text-blue-800">
-                California
-                <br />
-                Table Tennis
-              </span>
-            </div>
+          <Link href="/">
+            <img
+              src="/logo-color.png"
+              alt="California Table Tennis"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -23,9 +23,11 @@ const footerColumns = [
       { label: "Coach Gao Jun", href: "/coaches" },
       { label: "Coach Cherry", href: "/coaches" },
       { label: "Coach Candy", href: "/coaches" },
+      { label: "Coach Xue Luo", href: "/coaches" },
+      { label: "Coach Amanda", href: "/coaches" },
+      { label: "Coach Sam", href: "/coaches" },
       { label: "Coach Hank", href: "/coaches" },
       { label: "Coach Udaya", href: "/coaches" },
-      { label: "Coach Ruth", href: "/coaches" },
     ],
   },
   {
@@ -63,15 +65,7 @@ function InstagramIcon({ className }) {
 export default function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-gray-300">
-      {/* Social icons row */}
-      <div className="mx-auto flex max-w-7xl items-center justify-end gap-4 px-4 pt-10 sm:px-6 lg:px-8">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
-          <FacebookIcon className="h-5 w-5" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
-          <InstagramIcon className="h-5 w-5" />
-        </a>
-      </div>
+      <div className="pt-10" />
 
       {/* Main footer grid */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -140,17 +134,30 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-800">
+      <div>
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-sm text-gray-500">
-            A Table Tennis Club by Former World Champion | 501(c)(3) Nonprofit Organization
+            A Table Tennis Club by Former World Champion Gao Jun | 501(c)(3) Nonprofit Organization
           </p>
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
-            <span>&copy; 2010 – Present California Table Tennis All Rights Reserved</span>
-            <span className="hidden sm:inline">|</span>
-            <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
-            <span>|</span>
-            <Link href="/terms" className="hover:text-gray-300">Terms of Use</Link>
+          <hr className="my-4 border-gray-700" />
+          <div className="flex flex-wrap items-center justify-between gap-y-3">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+              <span>&copy; 2010 – Present California Table Tennis All Rights Reserved</span>
+              <span className="hidden sm:inline">|</span>
+              <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
+              <span>|</span>
+              <Link href="/cookies" className="hover:text-gray-300">Cookie Preferences</Link>
+              <span>|</span>
+              <Link href="/terms" className="hover:text-gray-300">Terms of Use</Link>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
+                <FacebookIcon className="h-5 w-5" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
