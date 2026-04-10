@@ -58,8 +58,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1534158914592-062992fbe900?w=1920&q=80')",
+            backgroundImage: "url('/hero.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a2744]/90 via-[#1a2744]/70 to-[#1a2744]/40" />
@@ -160,8 +159,7 @@ export default function Home() {
                 <div
                   className="aspect-[4/3] bg-cover bg-center"
                   style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=800&q=80')",
+                    backgroundImage: "url('/about.jpg')",
                   }}
                 />
               </div>
