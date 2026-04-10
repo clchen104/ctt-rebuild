@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
+import SideNav from "./components/SideNav";
 
 /* ── SVG Icon Components ── */
 
@@ -49,6 +50,8 @@ function CheckIcon({ className }) {
 export default function Home() {
   return (
     <>
+      <SideNav />
+
       {/* ═══════════ HERO ═══════════ */}
       <section className="relative flex min-h-[620px] items-center overflow-hidden">
         {/* Background — replace with your own gym photo */}
@@ -61,17 +64,17 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a2744]/90 via-[#1a2744]/70 to-[#1a2744]/40" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-center px-4 py-28 sm:px-6 lg:px-8">
+          <div className="max-w-2xl text-center">
             <h1 className="animate-fade-in-up font-heading text-5xl font-extrabold text-white sm:text-6xl lg:text-7xl">
               Master It.
             </h1>
-            <p className="animate-fade-in-up-delay mt-6 max-w-lg text-lg leading-relaxed text-gray-200">
+            <p className="animate-fade-in-up-delay mx-auto mt-6 max-w-lg text-lg leading-relaxed text-gray-200">
               Quickly improve your table tennis skills and learn from the best
               instructors today with our personalized one-on-one private lesson.
               Available to all ages.
             </p>
-            <div className="animate-fade-in-up-delay-2 mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="animate-fade-in-up-delay-2 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/classes"
                 className="rounded-md bg-red-600 px-7 py-3.5 text-center text-base font-semibold text-white shadow-lg transition-colors hover:bg-red-700"
@@ -96,21 +99,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Side page dots */}
-        <div className="absolute right-6 top-1/2 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
-          {["Hours", "Mission", "About US", "Services", "Footer"].map((label, i) => (
-            <div key={label} className="flex items-center gap-2">
-              {i === 0 && <span className="text-xs font-medium text-white">{label}</span>}
-              <div
-                className={`h-2.5 w-2.5 rounded-full border border-white/60 ${i === 0 ? "bg-red-500" : "bg-transparent"}`}
-              />
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* ═══════════ OPENING HOURS ═══════════ */}
-      <section className="bg-white shadow-md">
+      <section id="hours" className="bg-white shadow-md">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 py-5 sm:flex-row sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 rounded-sm bg-green-500 px-8 py-3 text-white">
             <span className="font-heading text-lg font-bold">Opening Hours</span>
@@ -142,26 +134,22 @@ export default function Home() {
       </section>
 
       {/* ═══════════ MISSION ═══════════ */}
-      <section id="mission" className="relative overflow-hidden py-24">
+      <section id="mission" className="relative overflow-hidden py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="font-heading text-sm font-bold uppercase tracking-widest text-red-600">
+          <div className="max-w-2xl">
+            <p className="font-heading text-xs font-bold uppercase tracking-widest text-red-600">
               Our Mission
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-snug text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 font-heading text-xl font-extrabold leading-snug text-gray-900 sm:text-2xl">
               Develop and nurture young talents throughout the country and
               provide an inclusive and world-class facility to all.
             </h2>
           </div>
         </div>
-        {/* Large background text */}
-        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 select-none font-heading text-[12rem] font-black uppercase leading-none tracking-tight text-gray-100 sm:text-[16rem]">
-          MISSION
-        </div>
       </section>
 
       {/* ═══════════ WHO WE ARE ═══════════ */}
-      <section className="py-20">
+      <section id="about" className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Image area with decorative circle */}
@@ -210,16 +198,16 @@ export default function Home() {
       </section>
 
       {/* ═══════════ OUR SERVICES ═══════════ */}
-      <section id="services" className="relative overflow-hidden py-24">
+      <section id="services" className="relative overflow-hidden py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="font-heading text-sm font-bold uppercase tracking-widest text-red-600">
+          <p className="font-heading text-xs font-bold uppercase tracking-widest text-red-600">
             What We Offer
           </p>
-          <h2 className="mt-2 font-heading text-3xl font-extrabold italic text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 font-heading text-xl font-extrabold italic text-gray-900 sm:text-2xl">
             Our Services
           </h2>
 
-          <div className="mt-16 grid gap-12 sm:grid-cols-3">
+          <div className="mt-12 grid gap-12 sm:grid-cols-3">
             {[
               {
                 Icon: MembershipIcon,
@@ -262,10 +250,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-        {/* Large background text */}
-        <div className="pointer-events-none absolute bottom-0 right-0 select-none font-heading text-[10rem] font-black uppercase leading-none tracking-tight text-gray-100 sm:text-[14rem]">
-          SERVICES
         </div>
       </section>
 

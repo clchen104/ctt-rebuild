@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ContactForm() {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -12,6 +13,8 @@ export default function ContactForm() {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => setMounted(true), []);
+
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
@@ -20,6 +23,10 @@ export default function ContactForm() {
     e.preventDefault();
     // TODO: wire up to an email service (e.g. Resend, SendGrid, or a serverless function)
     setSubmitted(true);
+  }
+
+  if (!mounted) {
+    return <div className="rounded-lg bg-white p-8 shadow-lg" style={{ minHeight: 380 }} />;
   }
 
   if (submitted) {

@@ -91,24 +91,6 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Location & Contact */}
-          <div>
-            <h4 className="font-heading text-sm font-bold text-white">Location</h4>
-            <p className="mt-3 text-sm text-gray-400">
-              2727 Stingle Ave.
-              <br />
-              #10, Rosemead CA
-              <br />
-              91770
-            </p>
-            <h4 className="mt-6 font-heading text-sm font-bold text-white">Contact Us</h4>
-            <p className="mt-2 text-sm text-gray-400">
-              1-626-765-7772
-              <br />
-              info@californiatabletennis.com
-            </p>
-          </div>
-
           {/* League & Resources */}
           <div>
             <h4 className="font-heading text-sm font-bold text-white">League</h4>
@@ -127,6 +109,32 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Location, Contact & Butterfly */}
+          <div>
+            <h4 className="font-heading text-sm font-bold text-white">Location</h4>
+            <p className="mt-3 text-sm text-gray-400">
+              2727 Stingle Ave.
+              <br />
+              #10, Rosemead CA
+              <br />
+              91770
+            </p>
+            <h4 className="mt-6 font-heading text-sm font-bold text-white">Contact Us</h4>
+            <p className="mt-2 text-sm text-gray-400">
+              1-626-765-7772
+              <br />
+              info@californiatabletennis.com
+            </p>
+            {/* Butterfly logo */}
+            <div className="mt-6">
+              <img
+                src="https://static.wixstatic.com/media/467df6_dbca37891a6a4473b3aa4df2ff1007f8~mv2.png/v1/fill/w_286,h_134,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BTY%20SHOP%202024_white%20outline.png"
+                alt="Butterfly Table Tennis"
+                className="h-12 w-auto opacity-80"
+              />
+            </div>
           </div>
         </div>
       </div>
