@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -8,13 +8,28 @@ const navLinks = [
   { href: "/scores", label: "Scores" },
   { href: "/coaches", label: "Coaches" },
   { href: "/classes", label: "Classes" },
-  { href: "/league", label: "League" },
   { href: "/membership", label: "Membership" },
-  { href: "/more", label: "More" },
+];
+
+const moreLinks = [
+  { href: "/insurance", label: "Insurance" },
+  { href: "/career", label: "Career" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (moreRef.current && !moreRef.current.contains(e.target)) {
+        setMoreOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -48,6 +63,41 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+
+            {/* More dropdown */}
+            <div ref={moreRef} className="relative">
+              <button
+                onClick={() => setMoreOpen(!moreOpen)}
+                className="flex items-center gap-1 px-3 py-2 text-[16px] font-medium text-[#1B2A4A] transition-colors hover:text-[#CC0000]"
+              >
+                More
+                <svg
+                  className={`h-4 w-4 transition-transform ${moreOpen ? "rotate-180" : ""}`}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              {moreOpen && (
+                <div className="absolute right-0 top-full mt-1 w-56 rounded-[4px] border border-[#D4D4D4] bg-white py-1">
+                  {moreLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setMoreOpen(false)}
+                      className="block px-4 py-2.5 text-[14px] font-medium text-[#1B2A4A] transition-colors hover:bg-[#F5F5F5] hover:text-[#CC0000]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* CTA Buttons */}
@@ -98,6 +148,19 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-1 border-t border-[#D4D4D4] pt-1">
+              <p className="px-3 py-2 text-[12px] font-semibold uppercase tracking-[0.5px] text-[#6B7280]">More</p>
+              {moreLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-3 py-2 text-base font-medium text-[#1B2A4A] hover:bg-[#F5F5F5] hover:text-[#CC0000]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
             <div className="mt-3 flex flex-col gap-2 border-t border-[#D4D4D4] pt-3">
               <Link
                 href="/login"

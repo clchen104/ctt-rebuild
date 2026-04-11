@@ -83,21 +83,18 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* League & Resources */}
+          {/* Resources */}
           <div>
-            <h4 className="text-[14px] font-semibold text-white">League</h4>
+            <h4 className="text-[14px] font-semibold text-white">More</h4>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/league" className="text-[14px] text-white/50 transition-colors hover:text-white">
-                  Overview
+                <Link href="/insurance" className="text-[14px] text-white/50 transition-colors hover:text-white">
+                  Insurance
                 </Link>
               </li>
-            </ul>
-            <h4 className="mt-6 text-[14px] font-semibold text-white">Resources</h4>
-            <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/help" className="text-[14px] text-white/50 transition-colors hover:text-white">
-                  Help Center
+                <Link href="/career" className="text-[14px] text-white/50 transition-colors hover:text-white">
+                  Career
                 </Link>
               </li>
             </ul>
