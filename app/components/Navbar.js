@@ -12,6 +12,7 @@ const navLinks = [
 ];
 
 const moreLinks = [
+  { href: "/booking", label: "Book a Lesson" },
   { href: "/insurance", label: "Insurance" },
   { href: "/career", label: "Career" },
 ];

@@ -33,8 +33,8 @@ const programs = [
       ],
       note: "*Pass is set to expire after 1 year. Pass is non-refundable.",
       cta: [
-        { label: "Book Now", href: "#" },
-        { label: "10 Class Pass", href: "#" },
+        { label: "Book Now", href: "/booking" },
+        { label: "10 Class Pass", href: "/booking" },
       ],
     },
   },
@@ -65,8 +65,8 @@ const programs = [
       ],
       note: "*Pass is set to expire after 1 year. Pass is non-refundable.",
       cta: [
-        { label: "Book Now", href: "#" },
-        { label: "10 Class Pass", href: "#" },
+        { label: "Book Now", href: "/booking" },
+        { label: "10 Class Pass", href: "/booking" },
       ],
     },
   },
@@ -108,7 +108,7 @@ const programs = [
       ],
       note: "*Please note that space is limited",
       cta: [
-        { label: "Start Learning Today!", href: "#" },
+        { label: "Start Learning Today!", href: "/booking" },
       ],
     },
   },

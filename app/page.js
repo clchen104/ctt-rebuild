@@ -72,13 +72,13 @@ export default function Home() {
             </p>
             <div className="animate-fade-in-up-delay-2 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/classes"
+                href="/booking"
                 className="rounded-[4px] bg-[#CC0000] px-6 py-3 text-center text-[16px] font-semibold text-white transition-colors hover:bg-[#A30000]"
               >
                 Book Private Lessons
               </Link>
               <Link
-                href="/classes"
+                href="/booking"
                 className="rounded-[4px] bg-[#CC0000] px-6 py-3 text-center text-[16px] font-semibold text-white transition-colors hover:bg-[#A30000]"
               >
                 Book Group Lesson

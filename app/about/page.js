@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SideNav from "../components/SideNav";
 
 function PlayerCard({ player }) {
   return (
@@ -40,6 +41,15 @@ function PlayerCard({ player }) {
 export default function AboutPage() {
   return (
     <>
+      <SideNav
+        items={[
+          { label: "Mission", href: "#mission" },
+          { label: "Timeline", href: "#timeline" },
+          { label: "Facilities", href: "#facility" },
+          { label: "Notable Players", href: "#players" },
+        ]}
+      />
+
       {/* ═══════════ HERO ═══════════ */}
       <section className="relative flex min-h-[300px] items-center justify-center overflow-hidden">
         <div
@@ -56,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══════════ MISSION / FOUNDER MESSAGE ═══════════ */}
-      <section className="bg-white py-20">
+      <section id="mission" className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
@@ -86,7 +96,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══════════ TIMELINE ═══════════ */}
-      <section className="bg-[#F5F5F5] py-20">
+      <section id="timeline" className="bg-[#F5F5F5] py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* 2012 */}
           <div className="grid items-center gap-12 lg:grid-cols-2">

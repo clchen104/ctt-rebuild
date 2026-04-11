@@ -2,19 +2,18 @@
 
 import { useState, useEffect } from "react";
 
-const NAV_ITEMS = [
-  { label: "Hours", href: "#hours" },
+const DEFAULT_ITEMS = [
   { label: "Mission", href: "#mission" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Contact Us", href: "#contact" },
 ];
 
-export default function SideNav() {
+export default function SideNav({ items = DEFAULT_ITEMS }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const sectionIds = NAV_ITEMS.map((item) => item.href.slice(1));
+    const sectionIds = items.map((item) => item.href.slice(1));
 
     function onScroll() {
       const scrollY = window.scrollY + window.innerHeight / 3;
@@ -44,7 +43,7 @@ export default function SideNav() {
         className="flex flex-col items-end transition-transform duration-500 ease-in-out"
         style={{ transform: `translateY(${offsetY}px)` }}
       >
-        {NAV_ITEMS.map((item, i) => {
+        {items.map((item, i) => {
           const distance = Math.abs(i - activeIndex);
           const isActive = i === activeIndex;
 

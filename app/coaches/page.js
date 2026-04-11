@@ -205,7 +205,7 @@ function CoachSection({ coach, index }) {
             </ul>
 
             <Link
-              href="/classes"
+              href="/booking"
               className="mt-8 inline-block rounded-[4px] border border-[#CC0000] px-10 py-2.5 text-[14px] font-semibold uppercase tracking-[0.5px] text-[#CC0000] transition-colors hover:bg-[#CC0000] hover:text-white"
             >
               Book Now
